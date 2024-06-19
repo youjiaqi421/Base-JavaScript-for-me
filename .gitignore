@@ -1,0 +1,29 @@
+.DS_Store
+node_modules/
+/fuzzing/
+dist
+src/dev
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/test/e2e/reports/
+selenium-debug.log
+.history
+*.zip
+*.tar
+*.bak
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# eslint cache
+.eslintcache
+
+.VSCodeCounter
+
+
