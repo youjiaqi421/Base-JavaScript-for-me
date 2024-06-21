@@ -4,5 +4,17 @@
  * 
 */
 
+Array.prototype.push1 = function(...arg) {
+    let length = this.length;
+    for (let i = 0; i < arg.length; i++) {
+        this[length + i] = arg[i]; // 添加每个新元素到数组末尾
+    }
+    return this.length
+}
+const a = [1]
 
-function push () {}
+console.log( a.push1(2) )
+
+console.log(a)
+
+
