@@ -1,0 +1,9 @@
+{
+	"name": "yjq",
+	"private": true,
+	"workspaces": {
+		"packages": [
+			"packages/*"
+		]
+	}
+}
