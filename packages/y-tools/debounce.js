@@ -7,19 +7,18 @@
  * @param {number} delay - 延迟执行的时间，单位为毫秒。
  * @returns {Function} - 返回一个新的防抖函数。
  */
+
+
 export function debounce(fn, delay) {
 	// 定义一个定时器变量，用于存储 setInterval 的引用。
 	let timer = null
 	// 返回一个新的函数，这个函数将处理实际的防抖逻辑。
-	return function () {
-		// 如果定时器已存在，则清除现有的定时器，
-		// 以确保在最后一次调用后重新计算延迟时间。
+	return function (...args) {
 		if (timer) {
-			clearInterval(timer)
+			clearTimeout(timer)
 			timer = null
 		}
-		// 设置一个新的定时器，经过指定的延迟时间后执行传入的函数 fn。
-		// 使用 apply 保证传入函数的 this 上下文和传入的参数。
-		timer = setInterval(() => fn.apply(this, arguments), delay)
+		console.log('ddd')
+		timer = setTimeout(() => fn.apply(this, args), delay)
 	}
 }
