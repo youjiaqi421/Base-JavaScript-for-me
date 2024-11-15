@@ -8,7 +8,6 @@
  * @returns {Function} - 返回一个新的防抖函数。
  */
 
-
 export function debounce(fn, delay) {
 	// 定义一个定时器变量，用于存储 setInterval 的引用。
 	let timer = null
@@ -18,7 +17,6 @@ export function debounce(fn, delay) {
 			clearTimeout(timer)
 			timer = null
 		}
-		console.log('ddd')
 		timer = setTimeout(() => fn.apply(this, args), delay)
 	}
 }
