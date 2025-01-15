@@ -48,10 +48,3 @@ class EventBus {
 		this.on(eventName, wrapper)
 	}
 }
-
-const hasMap = new Map()
-hasMap.set('a', [])
-
-hasMap.get('a').push('111111')
-
-console.log(hasMap.get('a'))

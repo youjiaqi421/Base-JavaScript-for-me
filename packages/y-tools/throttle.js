@@ -6,11 +6,23 @@ export function throttle(fn, delay) {
 
 	return function (args) {
 		if (!timerId) {
-			console.log('ddd')
 			timerId = setTimeout(() => {
 				fn.apply(this, args)
 				clearTimeout(timerId)
 				timerId = null
+			}, delay)
+		}
+	}
+}
+
+function t1(fn, delay) {
+	let timer = null
+	return function (...args) {
+		if (timer) {
+			timer = setTimeout(() => {
+				fn.apply(this, args)
+				clearTimeout(timer)
+				timer = null
 			}, delay)
 		}
 	}

@@ -1,0 +1,1 @@
+var mergeKLists = function (lists) {}
