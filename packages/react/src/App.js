@@ -63,13 +63,17 @@
 
 // export default App
 
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 
 const App = ({initialTime = 3}) => {
 	// 使用 useState 钩子来存储倒计时剩余的秒数
 	const [timeLeft, setTimeLeft] = useState(initialTime)
 	const [isRunning, setIsRunning] = useState(false)
 	const [intervalId, setIntervalId] = useState(null)
+
+	if (timeLeft === 0) {
+		return <div>倒计时结束！</div>
+	}
 
 	// 启动倒计时
 	const startCountdown = () => {
@@ -98,7 +102,7 @@ const App = ({initialTime = 3}) => {
 	// 重置倒计时
 	const resetCountdown = () => {
 		clearInterval(intervalId)
-		setTimeLeft(initialTime)
+		setTimeLeft(0)
 		setIsRunning(false)
 	}
 
@@ -110,8 +114,6 @@ const App = ({initialTime = 3}) => {
 	// 	}
 	// }, [intervalId])
 
-
-	
 	return (
 		<div>
 			<h1>Time Left: {timeLeft} seconds</h1>

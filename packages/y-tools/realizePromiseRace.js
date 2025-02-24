@@ -1,6 +1,6 @@
 // 实现一个Promise.race
 
-/**
+/** 
  * 实现 Promise.race 方法
  * Promise.race 会返回一个新的 Promise 实例，
  * 这个实例会在参数数组中最先改变状态的 Promise 的状态改变后，

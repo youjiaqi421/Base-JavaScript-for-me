@@ -30,7 +30,7 @@ function findParentTree(root, targetId) {
 				validChildren.push(filteredChild) // 收集有效的子节点
 			}
 		}
-
+cntion
 		// 如果当前节点或它的子节点中有符合条件的节点，则构建返回数据
 		if (isCurrentNodeValid || validChildren.length > 0) {
 			return {
