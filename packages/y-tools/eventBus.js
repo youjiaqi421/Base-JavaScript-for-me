@@ -41,7 +41,6 @@ class EventBus {
 
 	// 只订阅一次
 	once(eventName, callback) {
-		;``
 		const wrapper = (...args) => {
 			callback(...args)
 			this.off(eventName, wrapper)

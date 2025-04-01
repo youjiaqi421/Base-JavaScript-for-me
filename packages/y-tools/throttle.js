@@ -27,3 +27,17 @@ function t1(fn, delay) {
 		}
 	}
 }
+
+function throttle() {
+	let timer = null
+
+	return function () {
+		if (timer) {
+			timer = setTimeout(() => {
+				fn.apply(this, args)
+				clearTimeout(timer)
+				timer = null
+			}, delay)
+		}
+	}
+}

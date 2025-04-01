@@ -1,9 +1,13 @@
 {
 	"name": "yjq",
 	"private": true,
+	"type": "module",
 	"workspaces": {
 		"packages": [
 			"packages/*"
 		]
+	},
+	"dependencies": {
+		"langchain": "^0.3.19"
 	}
 }

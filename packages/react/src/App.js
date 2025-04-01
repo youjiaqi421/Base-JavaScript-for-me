@@ -19,24 +19,6 @@
 // 		console.log('1111')
 // 	}, 3000)
 
-// 	const tabs = [] // 用于存储打开的标签页
-
-// 	const openTab = url => {
-// 		const newTab = window.open(url, '_blank') // 打开新标签页
-// 		if (newTab) {
-// 			tabs.push(newTab) // 将新标签页添加到数组中
-// 			printCurrentUrl() //
-// 		}
-// 	}
-
-// 	const handleOpenBaidu = () => {
-// 		openTab('https://www.baidu.com') // 打开百度
-// 	}
-
-// 	const handleOpenGithub = () => {
-// 		openTab('https://github.com') // 打开GitHub
-// 	}
-
 // 	const printCurrentUrl = () => {
 // 		const currentUrl = window.location.href // 获取当前标签页的URL
 // 		console.log('当前标签页的网址:', currentUrl) // 打印当前标签页的网址
